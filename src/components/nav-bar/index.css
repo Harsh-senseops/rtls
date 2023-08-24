@@ -1,6 +1,5 @@
 .menu-bar {
     position: fixed;
-    /* right: 28%; */
     z-index: 4;
     top: 4px;
     border-radius: 25px;
@@ -43,12 +42,11 @@
 }
 
 .menu-bar li a:hover::before {
-    /* background: linear-gradient(to bottom, #e7e7e3, #ffffff); */
     box-shadow: 0px 3px 20px 0px rgb(168, 165, 165);
     transform: scale(1.1);
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px #f4505077;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -98,7 +96,7 @@
     transform: scale(1.1);
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px #f4505077;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -118,7 +116,7 @@
 
 
 .profile-details {
-    width: 45%;
+    /* width: 45%; */
     padding: 0.7em;
     letter-spacing: 2px;
     font-weight: bolder;
@@ -133,6 +131,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .profile-container {
@@ -150,7 +149,7 @@
     -webkit-backdrop-filter: blur(5px); */
 }
 
-/* .profile-container:hover::before{
+/* .profile-details:hover::before{
     box-shadow: 0px 3px 20px 0px rgb(168, 165, 165);
     transform: scale(1.1);
     background: rgba(255, 255, 255, 0.2);
@@ -161,7 +160,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.profile-container::before{
+.profile-details::before{
     content: " ";
     position: absolute;
     top: 0;

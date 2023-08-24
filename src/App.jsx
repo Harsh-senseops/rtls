@@ -14,16 +14,55 @@ import "./App.css";
 import Maps from "./pages/map";
 import NavBar from "./components/nav-bar";
 import Footer from "./components/footer";
+import CustomExpandableCard from "./components/expandable-card";
 
 const App = () => {
-  const imageArray = [india,afghanistan,france,jamaica,liberia,russaia,srilanka,taiwan,zimbabwe,australia]
+  const imageArray = [
+    india,
+    afghanistan,
+    france,
+    jamaica,
+    liberia,
+    russaia,
+    srilanka,
+    taiwan,
+    zimbabwe,
+    australia,
+  ];
+  const [expanded, setExpanded] = React.useState(false);
 
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   return (
     <>
-    <NavBar focusRef="homeRef"/>
- <Maps imageArray={imageArray}/>
- {/* <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorum tempora facere saepe recusandae necessitatibus aspernatur eaque corporis alias, praesentium provident labore dignissimos asperiores est aut? Modi itaque eveniet officia.</span> */}
-    <Footer/>
+      <NavBar focusRef="homeRef" />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          width: "100%",
+        }}
+      >
+        <Maps imageArray={imageArray} />
+        <div style={{ width: "20%", marginTop: "6em" }}>
+          <CustomExpandableCard expanded={expanded} handleExpandClick={handleExpandClick}/>
+          <CustomExpandableCard expanded={expanded} handleExpandClick={handleExpandClick}/>
+          <CustomExpandableCard expanded={expanded} handleExpandClick={handleExpandClick}/>
+          <CustomExpandableCard expanded={expanded} handleExpandClick={handleExpandClick}/>
+        </div>
+      </div>
+      <div
+        style={{
+          height: "10vh",
+          width: "100%",
+          background: "yellow",
+          marginTop: "20px",
+        }}
+      >
+        Alerts
+      </div>
+      <Footer />
     </>
   );
 };
