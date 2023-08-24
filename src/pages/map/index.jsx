@@ -26,7 +26,6 @@ export default function Maps({ imageArray }) {
     return () => clearInterval(interval);
   }, [data]);
   return (
-    <center>
       <div className="map-container">
         <img
           src={backgroundImage}
@@ -52,6 +51,5 @@ export default function Maps({ imageArray }) {
           />
         </XYPlot>
       </div>
-    </center>
   );
 }
