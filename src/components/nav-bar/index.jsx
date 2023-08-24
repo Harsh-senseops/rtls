@@ -84,7 +84,7 @@ export default function NavBar({ focusRef }) {
       <div className="profile-container">
         <div className="profile-details">
           <AccountBoxIcon />
-          <span>Harsad</span>
+          <span>User</span>
         </div>
         <div className="logout-btn" onClick={()=>logout(false)} > 
         <LogoutIcon  />
