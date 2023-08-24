@@ -1,0 +1,186 @@
+.menu-bar {
+    position: fixed;
+    right: 28%;
+    z-index: 4;
+    top: 4px;
+    border-radius: 25px;
+    height: fit-content;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-inline-start: 0px !important;
+    margin-top: 12px;
+}
+
+.menu-bar li {
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-bar li a::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.menu-bar li a:hover::before {
+    /* background: linear-gradient(to bottom, #e7e7e3, #ffffff); */
+    box-shadow: 0px 3px 20px 0px rgb(168, 165, 165);
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-bar li a {
+    width: 100%;
+    color: #383838;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin: 0 8px;
+    /* transition: all; */
+}
+
+/* .menu-bar li a:focus {
+    border-bottom: 4px solid rgb(184, 245, 179);
+    transition: 0.2s;
+} */
+
+.add-border {
+    border-bottom: 4px solid #F45050;
+    transition: 0.2s;
+}
+
+.remove-border {
+    border: none;
+    transition: 0.2s;
+}
+
+.logout-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logout-btn:hover::before {
+    box-shadow: 0px 3px 20px 0px rgb(168, 165, 165);
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logout-btn::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+
+.profile-details {
+    width: 45%;
+    padding: 0.7em;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* cursor: pointer; */
+    color: #435334;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.profile-container {
+    width: 20%;
+    position: absolute;
+    top: 1.1em;
+    right: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+}
+
+/* .profile-container:hover::before{
+    box-shadow: 0px 3px 20px 0px rgb(168, 165, 165);
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-container::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 5px;
+} */
+
+.logo-img{
+    padding: 0.5em;
+     background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: absolute;
+     left: 20px;
+     top: 8px;
+}
