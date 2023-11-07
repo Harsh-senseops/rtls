@@ -1,0 +1,83 @@
+.p-header {
+    background: rgba(255, 172, 172, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1%;
+    margin-bottom: 0px;
+}
+
+.tp {
+    color: #fffec4;
+    background: linear-gradient(180deg, rgba(255, 254, 196, 0.4133052879354867) 36%, rgba(255, 254, 196, 0.1359943635657388) 65%, rgba(255, 254, 196, 0.07717083415397408) 85%);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    margin-top: 0px;
+}
+
+.rw {
+    color: #ff6969;
+    background: linear-gradient(180deg, rgba(255, 105, 105, 0.3292716744901085) 36%, rgba(255, 105, 105, 0.11638652042848385) 65%, rgba(255, 105, 105, 0.06596635236125703) 85%);
+    background: rgb(255, 105, 105);
+    background: linear-gradient(180deg, rgba(255, 105, 105, 0.23963582014837181) 36%, rgba(255, 105, 105, 0.0911764363948705) 65%, rgba(255, 105, 105, 0.06596635236125703) 85%);
+    font-size: 1.8rem;
+    margin-top: 0px;
+}
+
+.dp {
+    color: rgb(121, 224, 238);
+    background: linear-gradient(180deg, rgba(121, 224, 238, 0.2788515064228817) 36%, rgba(121, 224, 238, 0.12198876132484249) 65%, rgba(121, 224, 238, 0.06876747280943629) 85%);
+    font-size: 1.8rem;
+    margin-top: 0px;
+
+}
+
+.dwd-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dwd-text {
+    display: flex;
+    justify-content: center;
+    font-size: 130%;
+    margin-top: 5%;
+}
+
+.dwd-info {
+    width: 95%;
+    margin-top: 4%;
+}
+
+.dwd-info-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 100%;
+}
+
+.dwd-info-child:nth-child(1) {
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #DDFFBB;
+    color: rgba(0, 0, 0, 0.694);
+    border-radius: 4px;
+}
+
+.dwd-info-child span {
+    width: 23%;
+    text-align: center;
+    font-weight: 500;
+    margin: 2%;
+    font-size: 1.3rem;
+}
+
+.dwd-info hr {
+    height: 1px;
+    width: 96%;
+    background-color: #ffffff;
+    border: white;
+}

@@ -1,0 +1,36 @@
+.exit-area-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background:#f7eac6 !important;
+}
+
+.exit-area-road{
+    width: 45%;
+    height: 27%;
+    background: #6a6a6a;
+}
+
+.exit-area-container span{
+    color: #3A98B9;
+    margin-right: 10%;
+}
+
+.exit-barcode-scanner-station{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0px;
+    left: 0px;
+    background: #FEFAE0;
+}
+
+.exit-area-container img{
+    width:8%; 
+}

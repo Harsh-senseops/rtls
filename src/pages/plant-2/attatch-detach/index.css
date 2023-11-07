@@ -1,0 +1,49 @@
+.ad-id-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.ad-id{
+    width: 43%;
+    background: #73E93B8C;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.ad-id h1{
+    margin: 0px;
+    margin-bottom: 0.6em;
+    font-size: 2.4rem;
+}
+
+.ad-a-id{
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.ad-msg-container{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 5px;
+    background: rgb(97, 93, 93);
+}
+
+.ad-msg {
+    margin-top: 1em;
+}
+
+.ad-msg h3{
+    margin: 0px;
+    text-align: center;
+}

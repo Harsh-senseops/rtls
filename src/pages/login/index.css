@@ -1,0 +1,36 @@
+.login-container{
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(326deg,#141517,#141517,#180303); */
+    /* background: rgb(0,0,0);
+    background: linear-gradient(343deg, rgba(0,0,0,1) 83%, rgba(255,0,191,1) 100%);  */
+    background: rgb(0,0,0);
+    background: linear-gradient(343deg, rgba(0,0,0,1) 83%, rgba(255,0,191,0.28165262687106096) 100%); 
+    background-size: 300% 300%;
+    animation: gradient-animation 6s ease;
+    /* background: #141517; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-layout{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-layout input{
+    /* box-shadow: #9BABB8 0px 6px 12px -2px, #9BABB8 0px 3px 7px -3px; */
+}
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 10% 1%;
+    }
+  }

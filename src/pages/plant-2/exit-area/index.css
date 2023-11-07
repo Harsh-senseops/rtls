@@ -1,0 +1,32 @@
+.eap-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ea{
+    width: 48%;
+    height: 50vh;
+}
+
+.buzzer{
+    width: 48%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f28482 !important;
+    flex-direction: column;
+    transition: box-shadow 0.5s; 
+    box-shadow: 10px 10px 40px #fe5f55, -10px -10px 50px #fe5f55;
+
+}
+
+.show-shadow {
+    box-shadow: 10px 10px 40px #fe5f55, -10px -10px 50px #fe5f55;
+  }
+  
+  .hide-shadow {
+    box-shadow: 0 0 0 transparent;
+  }

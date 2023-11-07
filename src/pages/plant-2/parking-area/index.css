@@ -1,0 +1,24 @@
+.parking-first-row{
+    width: 99.9%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pa-layout{
+    width: 49%;
+}
+
+.parking-second-row{
+    margin-top: 2%;
+    width: 99.9%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pa-dwd-graph-container{
+    width: 49%;
+}
+
+.pa-dwd-graph-container h4{
+    text-align: center;
+}
