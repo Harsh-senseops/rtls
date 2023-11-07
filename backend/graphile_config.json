@@ -1,0 +1,6 @@
+{
+    "db": "postgres://postgres:root@10.147.17.20/dharuhera",
+    "dbOwner": "postgres://postgres:root@10.147.17.20/dharuhera",
+    "schema": "public",
+    "port": 5000
+}

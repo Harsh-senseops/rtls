@@ -1,0 +1,26 @@
+{
+  "name": "graphileext_server",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest",
+    "start": "node graphileServer.js"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@graphile/pg-pubsub": "^4.10.0",
+    "@graphile/subscriptions-lds": "^4.9.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphile-utils": "^4.13.0",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-upload": "^16.0.2",
+    "jsonwebtoken": "^9.0.0",
+    "postgraphile": "^4.10.0",
+    "postgraphile-core": "^4.13.0",
+    "postgraphile-plugin-connection-filter": "^2.3.0",
+    "postgres-bytea": "^3.0.0"
+  }
+}

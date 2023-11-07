@@ -1,0 +1,42 @@
+const express = require("express");
+const { postgraphile, makePluginHook } = require("postgraphile");
+const { default: PgPubsub } = require("@graphile/pg-pubsub"); // rembember to install through yarn/npm
+const ConnectionFilterPlugin = require("postgraphile-plugin-connection-filter");
+const LiveQueriesPlugin = require("@graphile/subscriptions-lds").default;
+const bytea = require("./pgBytea");
+const pgConfig = {
+  db: "postgres://postgres:admin@localhost/practice",
+  dbOwner: "postgres://postgres:admin@localhost/practice",
+  schema: "public",
+  port: 5052,
+};
+
+const pluginHook = makePluginHook([PgPubsub]);
+var cors = require("cors");
+
+const postgraphileOptions = {
+  pluginHook, // add the plugin hook. This will make the @pgSubscription avaiable in our schema definitions
+  subscriptions: true, // start the websocket server
+  simpleSubscriptions: true, // Add the `listen` subscription field
+  watchPg: true,
+  graphiql: true,
+  enhanceGraphiql: true,
+  enableCors: true,
+  live: true,
+  ownerConnectionString: pgConfig.dbOwner,
+  appendPlugins: [ConnectionFilterPlugin, LiveQueriesPlugin, bytea],
+  websocketMiddlewares: [
+    // Add whatever middlewares you need here, note that they should only
+    // manipulate properties on req/res, they must not sent response data. e.g.:
+    //
+    //   require('express-session')(),
+    //   require('passport').initialize(),
+    //   require('passport').session(),
+  ],
+};
+
+const app = express();
+app.use(cors());
+
+app.use(postgraphile(pgConfig.db, pgConfig.schema, postgraphileOptions));
+app.listen(pgConfig.port);
