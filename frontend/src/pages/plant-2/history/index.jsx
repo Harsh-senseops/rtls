@@ -5,10 +5,6 @@ import CheckInIcon from "../../../assets/icons/check-in-icon";
 import ReworkIcon from "../../../assets/icons/rework-icon";
 import "./index.css";
 import Footer from "../../../components/footer";
-<<<<<<< HEAD
-
-function IconReturn({icon}) {
-=======
 import { GET_ALL_HISTORY } from "../../../api/queries";
 import { useQuery } from "urql";
 import ParkingAreaIcon from "../../../assets/icons/parking-area-icon";
@@ -69,7 +65,6 @@ function calculateTimeDifference(startTime, endTime) {
   return `${hours}:${minutes}`;
 }
 function IconReturn({ icon }) {
->>>>>>> f9113c7 (Latest code)
   if (icon === "Rework") {
     return (
       <div className="icon-bg" style={{ background: "#9376E0" }}>
@@ -94,28 +89,6 @@ function IconReturn({ icon }) {
       </div>
     );
   }
-<<<<<<< HEAD
-}
-
-function getColor(name) {
-    if (name === "Rework") {
-      return "#9376E0";
-    }
-    if (name === "Check Out") {
-      return "#f6c90e"
-    }
-    if (name === "Check In") {
-      return "#00a9ff"
-    }
-  }
-
-export default function History() {
-    const [vinDetails,setVinDetails] = useState(vinNumbers[0])
-    console.log(vinDetails)
-  return (
-    <>
-      <NavBar />
-=======
   if (icon === "Parking") {
     return (
       <div className="icon-bg" style={{ background: "#a8dadc" }}>
@@ -175,7 +148,6 @@ export default function History() {
     <>
       <NavBar />
       {/* <ParkingIcon/> */}
->>>>>>> f9113c7 (Latest code)
       <main>
         <div
           className="bg-theme"
@@ -186,57 +158,6 @@ export default function History() {
             placeholder="Enter VIN Number"
             options={vinNumbers}
             onChange={(event, newValue) => {
-<<<<<<< HEAD
-                console.log(event,newValue)
-                setVinDetails(newValue)
-              }}
-            sx={{ maxWidth: "100%" }}
-          />
-        </div>
-        <div className="bg-theme" style={{ padding: "1em",marginTop:"10px" }}>
-         {!vinDetails ? "" : <h2 style={{margin:"0px",marginBottom:"1em"}}>Select VIN number: {vinDetails.label}</h2>}
-          {!vinDetails ? "" : vinDetails.details.map((item,index)=>{
-            return (
-                <div className="track-list">
-                <IconReturn icon={item.name}/>
-                {index !== 2 ?<div
-                  style={{
-                    height: "25vh",
-                    width: "1px",
-                    background: "#EBF3E8",
-                    position: "absolute",
-                    left: "2%",
-                    zIndex: "-1",
-                  }}
-                ></div>:""}
-                <div
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    margin: "0.4em 1em",
-                  }}
-                >
-                  <span style={{color:getColor(item.name),fontWeight:"800",fontSize:"2rem"}}>{item.name}</span>
-                  <div
-                    style={{
-                      width: "60%",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      margin: "1em 0px",
-                    }}
-                  >
-                    <span>Start Time: {item.startTime}</span>
-                    <span>End Time: {item.endTime}</span>
-                  </div>
-                  <span>Duration: {item.duration}</span>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        <Footer/>
-=======
               setVinDetails(event, newValue);
             }}
             onInputChange={(event, newInputValue) => {
@@ -347,244 +268,7 @@ export default function History() {
               })}
         </div>
         <Footer />
->>>>>>> f9113c7 (Latest code)
       </main>
     </>
   );
 }
-<<<<<<< HEAD
-
-let vinNumbers = [
-  {
-    label: "AB0",
-    details: [
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB1",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB2",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB3",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB4",
-    details: [
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB5",
-    details: [
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB6",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB7",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB8",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-  {
-    label: "AB9",
-    details: [
-      {
-        name: "Rework",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check In",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-      {
-        name: "Check Out",
-        startTime: "2023-10-13 11:22:36.240",
-        duration: "2h",
-        endTime: "2023-10-13 11:23:28.137",
-      },
-    ],
-  },
-];
-=======
->>>>>>> f9113c7 (Latest code)

@@ -1,18 +1,5 @@
 import React from "react";
 import NavBar from "../../components/nav-bar";
-<<<<<<< HEAD
-
-export default function ConfigurationPage(){
-    return(
-<>
-<NavBar/>
-<main>
-    <h1>Config page</h1>
-</main>
-</>
-    )
-}
-=======
 import Tabs from "@mui/joy/Tabs";
 import TabList from "@mui/joy/TabList";
 import Tab from "@mui/joy/Tab";
@@ -41,4 +28,3 @@ export default function ConfigurationPage() {
     </>
   );
 }
->>>>>>> f9113c7 (Latest code)

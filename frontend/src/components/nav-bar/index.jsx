@@ -12,11 +12,7 @@ import {
   setNavbarDropDownChildIndex,
 } from "../../redux-slices/navbar";
 import { NavLink } from "react-router-dom";
-<<<<<<< HEAD
-import Footer from "../footer";
-=======
-import Timers from "./TImers";
->>>>>>> f9113c7 (Latest code)
+import Timers from "./Timers";
 
 export default function NavBar() {
   const navbarDropDownIndex = useSelector((store) => store.navbar.index);
@@ -44,10 +40,6 @@ export default function NavBar() {
       };
     })
   );
-<<<<<<< HEAD
-
-=======
->>>>>>> f9113c7 (Latest code)
   const dispatch = useDispatch();
   const toggleDropdown = (index) => {
     const updatedNavBarItems = [...navBarItems];
@@ -71,12 +63,6 @@ export default function NavBar() {
     localStorage.setItem("c", parseInt(index));
   };
   const withoutChildElement = (index) => {
-<<<<<<< HEAD
-    console.log(index)
-    dispatch(setNavbarDropDownIndex(index));
-    localStorage.setItem("p", index);
-  }
-=======
     dispatch(setNavbarDropDownIndex(index));
     localStorage.setItem("p", index);
   }
@@ -102,7 +88,6 @@ setNavBarItems(  router.map((item, index) => {
   };
 }))
   },[navbarDropDownChildIndex])
->>>>>>> f9113c7 (Latest code)
   return (
     <>
       <nav className="navbar bg-theme">
@@ -204,16 +189,8 @@ setNavBarItems(  router.map((item, index) => {
           </li>
         </ul>
       </nav>
-<<<<<<< HEAD
-   
-      <CustomBreadCrum />
-    </>
-  );
-}
-=======
    <Timers/>
       <CustomBreadCrum />
     </>
   );
 }
->>>>>>> f9113c7 (Latest code)

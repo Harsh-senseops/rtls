@@ -1,19 +1,11 @@
 .parking-first-row{
-<<<<<<< HEAD
-    width: 99.9%;
-=======
     width: 100%;
->>>>>>> f9113c7 (Latest code)
     display: flex;
     justify-content: space-between;
 }
 
 .pa-layout{
-<<<<<<< HEAD
-    width: 49%;
-=======
     width: 100%;
->>>>>>> f9113c7 (Latest code)
 }
 
 .parking-second-row{
@@ -25,13 +17,10 @@
 
 .pa-dwd-graph-container{
     width: 49%;
-<<<<<<< HEAD
-=======
     /* display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center; */
->>>>>>> f9113c7 (Latest code)
 }
 
 .pa-dwd-graph-container h4{
