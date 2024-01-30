@@ -19,7 +19,6 @@ export default function RepairPaintBay(){
     const [repairBayQuery,rexRepairBayQuery] = useSubscription({
         query:REPAIR_BAY
     })
-    console.log(repairBayQuery)
     return(
         <>
         <h1>Repair Bay</h1>

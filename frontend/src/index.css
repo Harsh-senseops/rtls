@@ -12,7 +12,8 @@
   -webkit-text-size-adjust: 100%;
   --font-sans-serif: "Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   /* custoom variables for background and colors */
-  
+  --s: 100px; /* control the size */
+  --_g: #00000000 90deg,#366 0;
   --bg-primary:#202125;
   --bg-secondary:#141517;
 }
@@ -22,6 +23,7 @@ body{
   background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
+  /* background-image: url("./assets/istockphoto-114288673-612x612.jpg"); */
 }
 
 body::-webkit-scrollbar {
@@ -33,7 +35,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #5a5a5a;
+  background: #ffffff;
 }
 
 main{

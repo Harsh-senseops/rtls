@@ -1,0 +1,37 @@
+.table-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background: #3c3744; */
+}
+
+.arrow-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em;
+    margin: 1em;
+    font-weight: bolder;
+    background: rgba(0, 0, 0, 0.119);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.arrow-icons:hover {
+    background: rgba(0, 0, 0, 0.539);
+}
+
+.custom-table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+.disabled:hover{
+    opacity: 0.1;
+}

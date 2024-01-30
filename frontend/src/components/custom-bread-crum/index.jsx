@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Breadcrumbs from "@mui/joy/Breadcrumbs";
 import Link from "@mui/joy/Link";
 import Typography from "@mui/joy/Typography";
@@ -9,6 +9,18 @@ import "./index.css";
 
 export default function CustomBreadCrum() {
     const [show,setShow] = React.useState(false)
+    const [lastItem,setLastItem] = React.useState("")
+    useEffect(() => {
+      let tempItem = window.location.href.split("/");
+      let lastItem = tempItem[tempItem.length - 1].split("-");
+      let result = lastItem.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      
+      // Capitalize the first letter of the last item
+      // lastItem = lastItem.charAt(0).toUpperCase() + lastItem.slice(1);
+    
+      setLastItem(result);
+    }, []);
+    
   return (
     <>
       <Breadcrumbs
@@ -24,17 +36,21 @@ export default function CustomBreadCrum() {
         <Link color="white" href="/">
           RTLS
         </Link>
+        <Typography>Plant2</Typography>
         {["Dashboard"].map((item) => (
           <Link
             key={item}
             color="white"
+            href="/plant2/dashboard"
           >
             {item}
           </Link>
         ))}
 
-        <Typography>Home</Typography>
-        <Box
+        <Typography>{lastItem}</Typography>
+       
+      </Breadcrumbs>
+        {/* <Box
           sx={{
             display: "flex",
             gap: 2,
@@ -62,8 +78,7 @@ export default function CustomBreadCrum() {
             </div>
             <span>User</span>
           </div>
-        </Box>
-      </Breadcrumbs>
+        </Box>  */}
       <div
         onClick={() => navigate("/login")}
         className="logout-dropDown bg-theme"

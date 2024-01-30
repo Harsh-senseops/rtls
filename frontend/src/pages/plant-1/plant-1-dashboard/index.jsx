@@ -61,8 +61,13 @@ export default function Plant1Dashboard() {
   useEffect(() => {
     if (res.data) {
       setAxisData({
+<<<<<<< HEAD
         x: res.data.allTagLiveLocationNewzones?.nodes[0].xAxis,
         y: res.data.allTagLiveLocationNewzones?.nodes[0].yAxis,
+=======
+        x: res.data.allTagLiveLocationNewzones?.nodes[0]?.xAxis,
+        y: res.data.allTagLiveLocationNewzones?.nodes[0]?.yAxis,
+>>>>>>> f9113c7 (Latest code)
       });
       console.log("I ran")
     }
@@ -138,7 +143,11 @@ export default function Plant1Dashboard() {
           {repairSlot
             ? repairSlot.map((val) => {
                 return (
+<<<<<<< HEAD
                   <div className="child" style={{ background: val.background }}>
+=======
+                  <div className="child" style={{ background: val.background,textShadow: '2px 2px 2px #ff8fab' }}>
+>>>>>>> f9113c7 (Latest code)
                     {val.bayName.toUpperCase()}
                   </div>
                 );

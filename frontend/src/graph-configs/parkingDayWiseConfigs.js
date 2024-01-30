@@ -46,7 +46,14 @@ export let parkingDayWiseConfig = (inCount,outCount,date) =>{
             },
           },
           yaxis: {
+            title:{
+              text:"Count",
+              style:{
+                color:"white"
+              }
+            },
             labels: {
+              
               style: {
                 colors: "white",
               },

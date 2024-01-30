@@ -1,11 +1,16 @@
-export let totalWorkConfigs = {
+export let totalWorkConfigs = (data) => ({
     series: [
       {
-        name: "series1",
-        data: [31, 40, 28, 51, 42, 109, 100],
+        name: "TOTAL REWORK",
+        data: data,
+      },
+      {
+        name: "",
+        data: [],
       },
     ],
     options: {
+     
       chart: {
         dropShadow: {
           enabled: false,
@@ -20,8 +25,11 @@ export let totalWorkConfigs = {
         toolbar: {
           show: false,
         },
+        zoom:{
+          enabled:false,
+        }
       },
-      colors: ["#FFFEC4",],
+      colors: ["#fe7f2d", "#26272c"],
       dataLabels: {
         enabled: false,
       },
@@ -30,19 +38,17 @@ export let totalWorkConfigs = {
         width: 2, // Adjust the width of the line
       },
       xaxis: {
-        type: "datetime",
-        categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z",
-        ],
+        type: "category",
+        categories:["","09:45","12:45","15:45","18:45"],
         labels: {
-          show: false, // Hide x-axis labels
+          datetimeUTC: false,
+          show: true,
+          style: {
+            colors: "white",
+            fontSize: "15px",
+          },
         },
+
         axisBorder: {
           show: false, // Hide x-axis lines
         },
@@ -51,7 +57,12 @@ export let totalWorkConfigs = {
         },
       },
       tooltip: {
-        enabled: false, // Disable tooltips
+        enabled: true, // Disable tooltips
+      },
+      legend: {
+        labels: {
+          colors: "white",
+        },
       },
       grid: {
         show: false,
@@ -60,4 +71,4 @@ export let totalWorkConfigs = {
         show: false, // Hide the y-axis line
       },
     },
-  };
+  });

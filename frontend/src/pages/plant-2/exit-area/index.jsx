@@ -50,6 +50,7 @@ export default function ExitAreaPage() {
         </div>
         <div style={{ width: "100%", display: "flex",justifyContent:"space-between" }}>
           <div style={{ width: "48%" }}>
+<<<<<<< HEAD
             <ReactApexChart
               options={parkingDayWiseConfig.options}
               series={parkingDayWiseConfig.series}
@@ -62,6 +63,20 @@ export default function ExitAreaPage() {
               series={parkingDayWiseConfig.series}
               type="bar"
             />
+=======
+            {/* <ReactApexChart
+              options={parkingDayWiseConfig.options}
+              series={parkingDayWiseConfig.series}
+              type="bar"
+            /> */}
+          </div>
+          <div style={{ width: "48%" }}>
+            {/* <ReactApexChart
+              options={parkingDayWiseConfig.options}
+              series={parkingDayWiseConfig.series}
+              type="bar"
+            /> */}
+>>>>>>> f9113c7 (Latest code)
           </div>
         </div>
       </main>

@@ -1,0 +1,62 @@
+.ps-container {
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    /* gap: 10px; */
+    row-gap: 10px;
+    column-gap: 1px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.grid-item {
+    border: 1px solid #000;
+    height: 10vh;
+    width: 94%;
+    border-radius: 5px;
+    color: black;
+    transition: all 1s ease-in-out;
+}
+
+.grid-item :hover {
+    /* opacity: 0.5; */
+}
+
+.ps-details {
+    padding: 0.4em;
+    color: #ffffff;
+    background: #f27059;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-align: center;
+    border-radius: 4px;
+    width: 17%;
+}
+
+.grid-container-contents{
+    font-size: 1.2rem;
+    font-weight: 1000;
+    color: #ffffff;
+}
+
+.p-vin-number{
+    /* border-bottom: 3px solid blue; */
+    color: #023e8a;
+    cursor: pointer;
+}
+
+.p-vin-number:hover{
+    color: white;
+    border-bottom: 3px solid rgb(0, 34, 255);
+}
+
+.grid-container-contents{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+}

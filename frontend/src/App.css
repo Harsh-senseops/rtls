@@ -13,3 +13,9 @@
     border-radius: 5px;
     border: 1px solid rgba(209, 213, 219, 0.3) !important;
 }
+
+
+.apexcharts-tooltip {
+    /* background: #f3f3f3; */
+    color: orange !important;
+  }

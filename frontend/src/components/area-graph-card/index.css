@@ -19,3 +19,8 @@
      width: 100%; 
      height: 90%;
 }
+
+#SvgjsG1520{
+   transform: translate(20, 50) ;
+   background: red !important;
+}

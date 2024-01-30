@@ -1,0 +1,7 @@
+#chart {
+    width: 100%;
+}
+
+.apexcharts-tooltip {
+    color: rgb(63, 63, 63) !important;
+}

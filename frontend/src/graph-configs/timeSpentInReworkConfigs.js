@@ -2,7 +2,7 @@ export let timeSpentInReworkCOnfigs = {
     series: [
       {
         name: "series1",
-        data: [31, 40, 28, 51, 42, 109, 100],
+        data: [100,100, 40, 28, 51, 42, 109, 100],
       },
     ],
     options: {

@@ -6,20 +6,20 @@ export default function AreaGraphCard({configs,title,count1,count2}) {
   return (
     <div className="graph-card-container">
       <span className="title-text">{title}</span>
-      <div>
-        <p className="count-text">
-          <span style={{ fontSize: "3rem" }}>{count1}</span><span>{count2 ? "/" + count2 : ""}</span>
-        </p>
-        <div className="graph-contaier">
+      <>
+        <span className="count-text">
+          <span style={{ fontSize: "7rem" }}>{count1}</span><span style={{ fontSize: "3rem" }}>{count2 ? "/" + count2 : ""}</span>
+        </span>
+        <div className="graph-container">
           <ReactApexChart
             options={configs.options}
             series={configs.series}
-            height="90%"
-            width="100%"
+            height={350}
+            // width={570}
             type="area"
           />
         </div>
-      </div>
+      </>
     </div>
   );
 }

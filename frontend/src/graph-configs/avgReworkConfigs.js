@@ -2,7 +2,11 @@ export let avgReworkRecivedConfigs = {
     series: [
       {
         name: "series1",
+<<<<<<< HEAD
         data: [31, 40, 28, 51, 42, 109, 100],
+=======
+        data: [100,100, 40, 28, 51, 42, 109, 100],
+>>>>>>> f9113c7 (Latest code)
       },
     ],
     options: {

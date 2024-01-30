@@ -1,0 +1,96 @@
+.rh-container {
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-container {
+    width: 200px;
+    /* Adjust the initial width as needed */
+    height: 200px;
+    /* Adjust the initial height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.enlarge-image {
+    width: 100%;
+    /* Make the image fill its container initially */
+    height: 100%;
+    transform: scale(0);
+    /* Initial scale set to 0, making it invisible */
+    transition: transform 0.5s ease-in-out;
+    /* Adjust the duration and timing function as needed */
+}
+
+.image-container:hover .enlarge-image {
+    transform: scale(1);
+    /* Scale to 1 on hover, making it appear larger */
+}
+
+.carIcon {
+    width: 80%;
+    height: 80%;
+    transform: scale(1);
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.bay-usage-container {
+    background: linear-gradient(180deg, rgba(255, 105, 105, 0.3292716744901085) 36%, rgba(255, 105, 105, 0.215) 65%, rgba(255, 105, 105, 0.06596635236125703) 85%);
+}
+
+.bay-vacancy-container {
+    background: linear-gradient(180deg, rgba(121, 224, 238, 0.2788515064228817) 36%, rgba(121, 224, 238, 0.12198876132484249) 65%, rgba(121, 224, 238, 0.06876747280943629) 85%);
+    color: rgb(121, 224, 238);
+}
+
+.bay-car-container {
+    background: linear-gradient(180deg, rgba(255, 254, 196, 0.4133052879354867) 36%, rgba(255, 254, 196, 0.409) 65%, rgba(255, 254, 196, 0.224) 85%);
+}
+
+.rh-vin-number {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #9ee493;
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    padding: 5%;
+    box-shadow: rgba(231, 225, 225, 0.24) 0px 3px 8px;
+    font-size: 0.8rem;
+    background: #58594f;
+    background: #292a2f;
+    /* box-shadow: 15px 15px 21px #4c4c3b, -15px -15px 21px #66664f; */
+    box-shadow: 12px 12px 24px #292929, -12px -12px 24px #373737;
+    border-radius: 8px;
+}
+
+.rh-vin-number:hover {
+    /* opacity: 0.7; */
+    /* box-shadow: -15px -15px -21px #4c4c3b, 15px 15px 21px #66664f; */
+    /* box-shadow: inset -10px -10px 20px 0px #66664f; */
+        box-shadow: -12px -12px 24px #292929, 12px 12px 24px #373737;
+
+}
+
+@keyframes example {
+    0% {
+        transform: scale(0.3);
+    }
+
+    25% {
+        background-color: scale(0.6);
+    }
+
+    50% {
+        background-color: scale(0.9);
+    }
+
+    100% {
+        background-color: scale(1)
+    }
+}

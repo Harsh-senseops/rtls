@@ -1,5 +1,69 @@
+type Bay {
+  emptyTimer: Float
+  usageTimer: Float
+  id: Int
+  isBreak:Boolean
+}
+
+type BayEfficienyData {
+day_date:Datetime
+spenthr:Float
+}
+
+type ParkingSlot {
+  emptyTimer: Float
+  usageTimer: Float
+  id: Int
+  isBreak:Boolean
+}
+
+type timers {
+  usageTimer:Int
+  emptyTimer:Int
+  bayName:String
+  details:bayDetails
+}
+
+type bayDetails {
+  tagId:String
+  vinId:String
+  isexport:Boolean
+  ispriority:Boolean
+  isattatched:Boolean
+  datetime:Datetime
+}
+
+type VehicelEfficencyData {
+datetime:Datetime
+vin_id:String
+tag_id:String
+isattatched:Boolean
+attatched_time:Datetime
+detached_time:Datetime
+isexport:Boolean
+ispriority:Boolean
+vehicle_efficiency:Float
+map_id:String
+}
 
 extend type Query {
   getMaxAnchorValues: String!
+  getAllTimers: [Bay]
+  showTimer(id: Int!): Int!
+  getAllParkingTimers:[ParkingSlot] 
+  getBayEfficency: [BayEfficienyData]
+  getAllTimersDetails: [timers]
+  getVehcileEfficency : [VehicelEfficencyData]
 }
 
+extend type Mutation {
+  startTimer(bayId: Int!,isEmpty: Boolean!): String!
+  stopTimer: String!
+  resumeTimer: String!
+  resetTimer: String!
+  startParkingTimer(date:Float!,parkingSlotId:Int!): String!
+}
+
+extend type Subscription {
+demo:String!
+}

@@ -2,19 +2,22 @@ const express = require("express");
 const { postgraphile, makePluginHook } = require("postgraphile");
 const fs = require("fs");
 const bodyParser = require("body-parser");
+const os = require('os');
 // const resolvers = require('./graphql/resolvers.js');
 const { default: PgPubsub } = require("@graphile/pg-pubsub"); // rembember to install through yarn/npm
 const ConnectionFilterPlugin = require("postgraphile-plugin-connection-filter");
 const LiveQueriesPlugin = require("@graphile/subscriptions-lds").default;
 const bytea = require("./pgBytea");
+const config = require("./graphileConfig.js")
 const pgConfig = {
-  db: "postgres://postgres:admin@192.168.29.75/rtls_plant2",
-  dbOwner: "postgres://postgres:admin@192.168.29.75/rtls_plant2",
+  db: `${config.config.user}://${config.config.user}:${config.config.password}@${config.config.host}/${config.config.dataBase}`,
+  dbOwner: `${config.config.user}://${config.config.user}:${config.config.password}@${config.config.host}/${config.config.dataBase}`,
   schema: "public",
   port: 5052,
 };
 const { makeExtendSchemaPlugin } = require("graphile-utils");
 const gql = require("graphql-tag");
+const some = require("./schedulers/schedulers.js").some
 
 const pluginHook = makePluginHook([PgPubsub]);
 const typeDefs = gql(
@@ -26,6 +29,17 @@ var cors = require("cors");
 
 const app = express();
 app.use(cors());
+
+some();
+app.get("/getIp",(req,res)=>{
+  let ip = ""
+  os.networkInterfaces()["Wi-Fi"].map((val)=>{
+    if(val.family === "IPv4"){
+      ip = val.address
+    }
+  })
+  res.json({ip})
+})
 
 const MyRegisterUserMutationPlugin = makeExtendSchemaPlugin((build) => {
   const { pgSql: sql } = build;

@@ -13,13 +13,17 @@
     color: #fffec4;
     background: linear-gradient(180deg, rgba(255, 254, 196, 0.4133052879354867) 36%, rgba(255, 254, 196, 0.1359943635657388) 65%, rgba(255, 254, 196, 0.07717083415397408) 85%);
     border-radius: 4px;
+<<<<<<< HEAD
     font-size: 1.8rem;
     margin-top: 0px;
+=======
+>>>>>>> f9113c7 (Latest code)
 }
 
 .rw {
     color: #ff6969;
     background: linear-gradient(180deg, rgba(255, 105, 105, 0.3292716744901085) 36%, rgba(255, 105, 105, 0.11638652042848385) 65%, rgba(255, 105, 105, 0.06596635236125703) 85%);
+<<<<<<< HEAD
     background: rgb(255, 105, 105);
     background: linear-gradient(180deg, rgba(255, 105, 105, 0.23963582014837181) 36%, rgba(255, 105, 105, 0.0911764363948705) 65%, rgba(255, 105, 105, 0.06596635236125703) 85%);
     font-size: 1.8rem;
@@ -32,6 +36,15 @@
     font-size: 1.8rem;
     margin-top: 0px;
 
+=======
+    border-radius: 4px;
+}
+
+.dsp {
+    color: rgb(121, 224, 238);
+    background: linear-gradient(180deg, rgba(121, 224, 238, 0.2788515064228817) 36%, rgba(121, 224, 238, 0.12198876132484249) 65%, rgba(121, 224, 238, 0.06876747280943629) 85%);
+    border-radius: 4px;
+>>>>>>> f9113c7 (Latest code)
 }
 
 .dwd-container {
@@ -80,4 +93,20 @@
     width: 96%;
     background-color: #ffffff;
     border: white;
+<<<<<<< HEAD
 }
+=======
+}
+
+.dw-detail-holder{
+    padding: 0.3em;
+    letter-spacing: 3px;
+    display:flex;
+    /* width: 32%; */
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+    font-size: 2rem;
+}
+
+>>>>>>> f9113c7 (Latest code)

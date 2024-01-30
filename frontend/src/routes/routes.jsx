@@ -25,18 +25,18 @@ import ExitAreaPage from "../pages/plant-2/exit-area";
 import ConfigurationPage from "../pages/configuration-page";
 export const router = [
   // { title: "Dashboard", icon: DashboardIcon, path: "/", element: <App /> },
-  {
-    title: "Plant 1",
-    icon: PlantIcon,
-    child: [
-      {
-        title: "Dashboard",
-        icon: DashBoardIcon2,
-        path: "/plant1-dashboard",
-        element: <Plant1Dashboard />,
-      },
-    ],
-  },
+  // {
+  //   title: "Plant 1",
+  //   icon: PlantIcon,
+  //   child: [
+  //     {
+  //       title: "Dashboard",
+  //       icon: DashBoardIcon2,
+  //       path: "/plant1-dashboard",
+  //       element: <Plant1Dashboard />,
+  //     },
+  //   ],
+  // },
   {
     title: "Plant 2",
     icon: PlantIcon,
@@ -48,33 +48,33 @@ export const router = [
         element: <Plant2Dashboard />,
       },
       {
-        title: "Tesing Area",
+        title: "Weld Repair Area",
         icon: TestingAreaIcon,
-        path: "/plant2-testing",
+        path: "/plant2/weld-repair-area",
         element: <TestingAndReworkArea />,
       },
       {
         title: "Parking Area",
         icon: ParkingAreaIcon,
-        path: "/plant2-parking-area",
+        path: "/plant2/parking-area",
         element: <ParkingAreaPage />,
       },
       {
         title: "Gate Way",
         icon: GateWayIcon,
-        path: "/gate-way",
+        path: "/plant2/gate-way",
         element: <ExitAreaPage />,
       },
       {
         title: "History",
         icon: HistoryIcon,
-        path: "/plant2-history",
+        path: "/plant2/history",
         element: <History />,
       },
       {
-        title: "Marry/Unmarry",
+        title: "Attach/Detach",
         icon: MarryUnMarryIcon,
-        path: "/plant2-attach-detach",
+        path: "/plant2/attach-detach",
         element: <AttachDetach />,
       },
       {

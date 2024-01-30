@@ -1,0 +1,467 @@
+.d-parking-layout {
+    width: 90%;
+    height: 25%;
+    /* background-color: rgb(255, 242, 178); */
+    margin-left: 4%;
+    margin-top: 0.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    align-self: flex-start;
+    /* border-radius: 3px; */
+}
+
+.d-road-1{
+    position: absolute;
+    width: 3%;
+    height: 98%;
+    background-color: black;
+    left: 1%;
+    margin-top: 0.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}   
+
+.d-road-1 div{
+    width: 15%;
+    height: 10%;
+    background: white;
+}
+
+.d-parking-slots-container {
+    width: 20%;
+    height: 40%;
+    background-color: rgb(232 217 145);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.d-parking-slots {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 8%);
+    gap: 2%;
+    color: black;
+    justify-content: center;
+}
+
+.d-slots {
+    height: 90%;
+    margin-top: 3%;
+    color: rgba(0, 0, 0, 0.605);
+    border-radius: 3px;
+}
+
+.d-parking-slots span {
+    position: absolute;
+    font-size: 130%;
+    z-index: 0;
+    color: #00000066;
+    top: 25%;
+    left: 23%;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 0.1em;
+    border-radius: 3px;
+}
+
+.navigation-buttons {
+    position: absolute;
+    font-size: 130%;
+    z-index: 3;
+    color: #00000066;
+    top: 25%;
+    left: 23%;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 0.1em;
+    border-radius: 3px;
+}
+
+.navigation-buttons:hover{
+    position: absolute;
+    font-size: 130%;
+    z-index:3;
+    color: #00000066;
+    top: 25%;
+    left: 23%;
+    color: black;
+    background-color: #f1ff88;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+    cursor: pointer;
+}
+
+
+.d-parking-slots span:hover {
+    position: absolute;
+    font-size: 130%;
+    z-index: 0;
+    color: #00000066;
+    top: 25%;
+    left: 23%;
+    color: black;
+    background-color: #f1ff88;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+}
+
+.d-parking2-layout {
+    width: 20%;
+    height: 50%;
+    align-self: flex-start;
+    /* margin: 0.4% 0 1% 1%; */
+    background-color: #ced4da;
+    border-radius: 3px;
+    position: relative;
+}
+
+.d-parking2-layout ::after{
+    content: "";
+    width: 20%;
+    background: #000000;
+    position: absolute;
+    right: -20%;
+    height: 50%;
+}
+
+.d-road-2{
+    position: absolute;
+    width: 3%;
+    height: 80%;
+    background: #000000;
+    left: 22.6%;
+    top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.d-road-2 div{
+    display: flex;
+    width: 15%;
+    height: 10%;
+    background: white;
+
+}
+
+.d-parking2-layout hr {
+    position: absolute;
+    top: 39%;
+    width: 98%;
+}
+
+.unknown-layout-1 {
+    position: absolute;
+    width: 10%;
+    height: 50%;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    left: 25%;
+    top: 1%;
+}
+
+.unknown-layout-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    bottom: -10%;
+    border-radius: 3px;
+    /* background-color: bisque; */
+    left: 25%;
+}
+
+.unknown-layout-2-child-1 {
+    width: 15%;
+    height: 100%;
+    background-color: #ced4da;
+    border-radius: 3px;
+}
+
+.unknown-layout-2-child-2 {
+    width: 70%;
+    height: 100%;
+    background-color: #ced4da;
+    border-radius: 3px;
+    margin-left: 20%;
+}
+
+.align-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-repair-slots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 16%; */
+    padding: 9% 7%;
+}
+
+.d-fuel-inspection-road{
+    height: 15%;
+    width: 93%;
+    align-self: flex-start;
+    margin-top: 2%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.road-pattern{
+    position: absolute;
+    width: 15% !important;
+    height: 100% !important;
+    background-color: transparent !important;
+    z-index: 3;
+    right: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.road-pattern div{
+    width: 2px !important;
+    height: 100% !important;
+    background-color: rgb(168, 86, 86);
+}
+
+.d-fuel-inspection-road div{
+    width: 10%;
+    height: 15%;
+    background-color: white;
+
+}
+
+.d-fuel-inspection-road span {
+    position: absolute;
+    /* background-color: rgb(255, 255, 255); */
+    color: rgb(255, 150, 58);
+}
+
+.d-first-layer{
+    width: 92%;
+    height: 40%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.d-first-layer-child{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-kaku-exp{
+   width: 19%;
+   height: 80%;
+   position: absolute;
+   top: 4%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   /* margin-bottom: 30%; */
+}
+
+.d-c-kaku{
+  width: 80%;
+  height: 48%;
+  background: #dee2e6;
+}
+
+.d-c-exp{
+    width: 70%;
+    height: 50%;
+    background: #dee2e6;
+}
+
+.d-dif-bays{
+    margin-left: 25%;
+    width: 68%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e2e8b2;
+}
+
+.d-bay-layer-1{
+    width:100%;
+    height: 30%;
+    background: white;
+    display: flex;
+}
+
+.d-bay-layer-2{
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.d-bay-layer-2 div{
+    width: 6%;
+    height: 80%;
+    background-color: rgb(231, 167, 103);
+    transform: skew(14deg);
+}
+
+.d-weld-area{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    position: relative;;
+}
+
+.d-weld-area-slots{
+    width: 10%;
+    height: 100%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    transform: skew(14deg);
+}
+
+.d-weld-area-slots img{
+    width: 95%;
+    height: 95%;
+    /* transform: rotate(2deg); */
+}
+
+.d-weld-area span {
+    position: absolute;
+    z-index: 1;
+    color: #724c4c;
+    top: 30%;
+}
+
+.d-four-post{
+    width: 13%;
+    height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.d-four-post div{
+    width: 80%;
+    height: 97%;
+    background-color: #808080;
+    transform: skew(20deg);
+}
+
+.d-repair-bay-area{
+    width: 30%;
+    border: 1px solid black;
+}
+
+.d-unknown-bays{
+    width: 20%;
+    border: 1px solid black;
+}
+
+.d-function{
+    width: 63%;
+    margin-left: 17%;
+    height: 18%;
+    display: flex;
+    position: relative;
+}
+
+.d-function-c{
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+}
+
+.func-1{
+    width: 100%;
+    height: 50%;
+    background: #495057;
+    position: relative;
+}
+
+.func-2{
+    width: 100%;
+    height: 50%; 
+    background: #495057;
+    position: relative;
+}
+
+.shower-line{
+    width: 15%;
+    background: #6c757d;
+    position: relative;
+}
+
+.d-function hr{
+    position: absolute;
+    width: 99%;
+    top: 40%;
+    z-index: 1;
+    height: 2;
+    background-color: #ced4da;
+    color: #ced4da;
+}
+
+.d-trim-inspection{
+    width: 63%;
+    margin-left: 17%;
+    height: 10%;
+    background: #ced4da;
+}
+
+.final-inspection-line{
+    position: absolute;
+    width: 8%;
+    height: 48%;
+    right: 1%;
+    top: 32%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-box{
+    width: 100%;
+    height: 15%;
+    background-color: grey;
+}
+
+.middle-box{
+    width: 50%;
+    height: 65%;
+    background-color: grey;
+    align-self: flex-end;
+}
+
+.bottom-box{
+    width: 100%;
+    height: 15%;
+    background-color: grey;
+}
+
+.empty-pattern {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: repeating-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000), repeating-linear-gradient(45deg, #000000 25%, #e5e5f7 25%, #e5e5f7 75%, #000000 75%, #000000);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+}
+

@@ -1,11 +1,23 @@
-export let checkInCheckOutConfig = {
+export function checkInCheckOutConfig(inData, outData) {
+
+  return {
     series: [
       {
-        name: "series1",
-        data: [31, 40, 28, 51, 42, 109, 100],
+        name: "OUT",
+        // data: [1,2,3,4,5,6,7,8,9,10],
+        data:outData
+      },
+      {
+        name: "CHECK IN",
+        // data: [1,2,3,4,5,6],
+        data:inData
       },
     ],
     options: {
+      style: {
+        fontSize: "12px",
+        colors: ["#fff"],
+      },
       chart: {
         dropShadow: {
           enabled: false,
@@ -20,8 +32,11 @@ export let checkInCheckOutConfig = {
         toolbar: {
           show: false,
         },
+        zoom:{
+          enabled:false,
+        }
       },
-      colors: ["#FF6969",],
+      colors: ["#FF6969", "#fcca46"],
       dataLabels: {
         enabled: false,
       },
@@ -29,20 +44,20 @@ export let checkInCheckOutConfig = {
         curve: "smooth",
         width: 2, // Adjust the width of the line
       },
+
       xaxis: {
-        type: "datetime",
-        categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z",
-        ],
+        type: "category",
+        categories:["","09:45","12:45","15:45","18:45"],
+        // categories:[]
         labels: {
-          show: false, // Hide x-axis labels
+          // datetimeUTC: false,
+          show: true,
+          style: {
+            colors: "white",
+            fontSize: "15px",
+          },
         },
+
         axisBorder: {
           show: false, // Hide x-axis lines
         },
@@ -51,7 +66,18 @@ export let checkInCheckOutConfig = {
         },
       },
       tooltip: {
-        enabled: false, // Disable tooltips
+        enabled: true,
+        style: {
+          fontSize: '12px',
+          fontFamily: undefined,
+          color:"black"
+        },
+         // Disable tooltips
+      },
+      legend: {
+        labels: {
+          colors: "white",
+        },
       },
       grid: {
         show: false,
@@ -61,3 +87,4 @@ export let checkInCheckOutConfig = {
       },
     },
   };
+}
